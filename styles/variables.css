@@ -7,4 +7,5 @@
   --header-color: #db00ff;
   --decor-color: #ff0070;
   --bg-image: url(../images/cover-image-dark.png);
+  --header-decorator-display: flex;
 }
