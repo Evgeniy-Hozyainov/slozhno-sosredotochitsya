@@ -221,6 +221,11 @@
   background-color: var(--accent-color, #ff0070);
 }
 
+.section-what__card-list {
+  display: grid;
+  gap: 20px;
+}
+
 @media (width >= 768px) {
   .section-why {
     grid-template-columns: 1fr 2fr;
@@ -232,11 +237,10 @@
 
   .section-what {
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: auto;
   }
 
-  .section-what .card {
-    grid-column: 1 / 4;
+  .section-what__card-list {
+    grid-column: 1 / -1;
   }
 
   .section-tips {
@@ -264,6 +268,10 @@
 
 .card__text {
   margin-top: 10px;
+}
+
+.card__text p:not(:last-child) {
+  margin-bottom: 1em;
 }
 
 .card__link {
@@ -340,9 +348,9 @@
     gap: 20px;
   }
 
-  .section-what .card {
-    grid-column: initial;
-    grid-row-start: 2;
+  .section-what__card-list {
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(auto-fit, minmax(314px, 1fr));
   }
 
   .section-tips {
